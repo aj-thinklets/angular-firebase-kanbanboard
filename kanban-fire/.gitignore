@@ -40,10 +40,10 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-/src/environments/**
-/src/environments
+**/src/environments/environment.prod.ts
+**/src/environments/environment.ts
 #environment files
-/src/environments/**
+**/src/environments/**
 
 
 # System Files
