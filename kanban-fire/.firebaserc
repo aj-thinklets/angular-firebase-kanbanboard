@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-firebase-test": {
+      "hosting": {
+        "kanban-fire": [
+          "kanban-firebase-test"
+        ]
+      }
+    }
+  }
+}
