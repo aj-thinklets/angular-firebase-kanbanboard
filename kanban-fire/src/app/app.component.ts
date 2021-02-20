@@ -6,8 +6,6 @@ import { BehaviorSubject } from 'rxjs';
 import { TaskDialogComponent, TaskDialogResult } from './task-dialog/task-dialog.component';
 import { Task } from './task/task';
 
-
-
 // Wrap into a BehaviorSubject so that we don't create a new
 // underlying array every time. This way the reorder method
 // of the CDK drag & drop would work since it'll operate
@@ -41,11 +39,9 @@ export class AppComponent {
   inProgress = getObservable(this.store.collection('inProgress'));
   done = getObservable(this.store.collection('done'));
 
-
   constructor(private dialog: MatDialog, private store: AngularFirestore) { }
 
-
-  //working with observable and firestore
+  //DROP EVENT
   drop(event: CdkDragDrop<Task[]>): void {
     if (event.previousContainer === event.container) {
       const item = event.previousContainer.data[event.previousIndex];
@@ -75,7 +71,7 @@ export class AppComponent {
     }
   }
 
-  //working with observable and firestore
+  // EDIT TASK 
   edit(list: 'done' | 'todo' | 'inProgress', task: Task): void {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
       width: '270px',
@@ -95,7 +91,7 @@ export class AppComponent {
       })
   }
 
-  //working with observable and firestore
+  // ADD NEW TASK
   newTask() {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
       width: '270px',
@@ -105,7 +101,10 @@ export class AppComponent {
     });
     dialogRef
       .afterClosed()
-      .subscribe((result: TaskDialogResult) => this.store.collection('todo').add(result.task));
+      .subscribe((result: TaskDialogResult) => {
+        console.log("result.task", `Result is ${result} and task is ${result.task}`)
+        this.store.collection('todo').add(result.task)
+      });
   }
 
   //Normal Array Function w/o firebase local store
@@ -118,7 +117,6 @@ export class AppComponent {
   //     event.currentIndex
   //   );
   // }
-
 
   //Edit with local store
   // edit(list: 'done' | 'todo' | 'inProgress', task: Task): void {
