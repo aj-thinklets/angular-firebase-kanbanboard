@@ -17,13 +17,10 @@ Firebase CLI.
 
 # Project dependencies
 Step-1. Create a new Angular 11 project (the below command will scaffold the project and install the dependencies)
-- ng new <project-name>
+- ng new [project-name]
 
 Step-2. Install Angular material (CDK is the dependency of angular material and will get automatically installed)
 - ng add @angular/material
 
-Step-3. Angular Firebase
-- ng add @angular/fire
-
-Step-4. Add angular fire (in the root directory) 
+Step-3. Add angular fire (in the root directory) 
 - ng add @angular/fire
