@@ -17,6 +17,7 @@ export class TaskDialogComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   cancel(): void {
     this.data.task.title = this.backupTask.title,
     this.data.task.description = this.backupTask.description,
