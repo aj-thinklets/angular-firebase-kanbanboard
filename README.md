@@ -1,28 +1,29 @@
 # angular-firebase-kanbanboard
 
-#About
-Simple Kandan board using Angular 11 and Firebase. The purpose of this project was to learn and explore the power of CDK library drag-drop functionality. 
+# About
+Simple Kandan board using Angular 11 and Firebase. 
+The purpose of this project was to learn and explore the power of CDK library drag-drop functionality. 
 
-#Services 
+# Services 
 Hosting:
-- For hosting this application we will use Firebase hosting service
+- For hosting, we will use Firebase hosting service
 
 Database:
-- For storing our tasks, we will use highly scable cloudFire store
+- For storing our tasks, we will use a highly scalable Cloud-Fire store
 
 Firebase CLI.
-- Firebase CLI will help us to easily deploy and manage the project
+- Firebase CLI to deploy and manage the project
 
 
-#Dependencies
-Step-1. Create new Angular 11 project (below command will scafold the project and install the dependencies)
+# Project dependencies
+Step-1. Create a new Angular 11 project (the below command will scaffold the project and install the dependencies)
 - ng new <project-name>
 
-Step-2. Install Angular material (cdk is the dependency of angular material and will get automatically installed)
+Step-2. Install Angular material (CDK is the dependency of angular material and will get automatically installed)
 - ng add @angular/material
 
 Step-3. Angular Firebase
 - ng add @angular/fire
 
-Step-4. Add angular fire (in root directory) 
+Step-4. Add angular fire (in the root directory) 
 - ng add @angular/fire
